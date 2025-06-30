@@ -51,11 +51,11 @@ const Work = () => {
       <h2>Credentials</h2>
           <div className="docs-container">
             <div className="docs-thumb">
-            <a href="../docs/A.Olson_Resume.pdf" download>
+            <a href="/docs/A.Olson_Resume.pdf" download>
               <img src={resume} alt="resume" className="thumbnail-img" /></a>
                  </div>
                  <div className="docs-thumb">
-            <a href="../docs/A.Olson_eDiploma.pdf" download>
+            <a href="/docs/A.Olson_eDiploma.pdf" download>
               <img src={diploma} alt="diploma" className="thumbnail-img" /></a>
                  </div>
                  </div>
@@ -68,8 +68,6 @@ const Work = () => {
         return renderPortfolioContent();
       case 'resume':
         return renderCrendentialsContent();
-      // case 'video':
-      //   return renderVideoContent();
       default:
         return null; 
     }
