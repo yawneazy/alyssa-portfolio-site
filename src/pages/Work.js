@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import piano from '../images/piano.jpg';
 import vgslogo from '../images/vgs-thumb.png';
+import yawneazyMusic from '../images/yawneazy-site.JPG';
 import resume from '../images/resume-thumb.png';
 import diploma from '../images/diploma-thumb.png';
 import '../styles/Work.css';
@@ -33,7 +34,7 @@ const Work = () => {
             <span className={`caret ${isExpanded ? 'rotate' : ''}`}>▼</span>
           </div> */}
                  <div className="thumbnail">
-                 <a href="vgs.arizona.edu"><img src={vgslogo} alt="VGS" className="thumbnail-img" />
+                 <a href="https://vgs.arizona.edu"><img src={vgslogo} alt="VGS" className="thumbnail-img" />
                  <p class="description-title">VGS</p></a>
                  <p>Description: </p>
                  <p>This is the re-designed website for VGS (Vegetation GIS Data System), which was my first project as a 
@@ -41,6 +42,13 @@ const Work = () => {
                   with progress and actively seeking their feedback and suggestions. This collaborative approach allowed me to 
                   refine the site effectively, enhancing its functionality and user experience. The project highlights my skills 
                   in UI/UX design and my commitment to teamwork and continuous improvement.</p>
+                 </div>
+
+                 <div className="thumbnail">
+                 <a href="https://yawneazy.com"><img src={yawneazyMusic} alt="yawneazy-music" className="thumbnail-img" />
+                 <p class="description-title">Yawneazy Music</p></a>
+                 <p>Description: </p>
+                 <p>Alyssa Olson's music website</p>
                  </div>
                  </div>
     </>
