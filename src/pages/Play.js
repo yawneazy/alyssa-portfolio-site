@@ -3,6 +3,7 @@ import '../styles/Play.css'
 import { Link } from 'react-router-dom';
 import cactuspainting from '../images/cactus-painting.png';
 import flowerspainting from '../images/flowers-painting.jpeg';
+import digitalProfilePic from '../images/digital-art-profile-pic.jpg';
 
 const Play = () => {
 
@@ -37,6 +38,17 @@ const Play = () => {
           <p className="description-title">Description:</p>
           <p>
             2018: Textured artwork featuring flowers, created with texture paste, and inspired by a reference painting.
+          </p>
+        </div>
+        <div class="summary-text">
+          Summary: Working with various art mediums, both digital and traditional, has deepened my understanding of color theory, shadows, and
+          textures. This artistic foundation has greatly influenced my approach to user experience (UX) design.
+        </div>
+        <div className="thumbnail">
+          <img src={digitalProfilePic} alt="Digital Art Profile Pic" className="thumbnail" />
+          <p className="description-title">Description:</p>
+          <p>
+            2023: Digital portrait photo drawn using ProCreate, a digital art app.
           </p>
         </div>
         <div class="summary-text">
