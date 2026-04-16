@@ -67,6 +67,39 @@ const Work = () => {
                  <p>Alyssa Olson's music website - <b>In progress</b></p>
                  </div>
                  </div>
+
+                 <h2>Prototypes</h2>
+                 <div className="thumbnail">
+                  
+                 {/* <a href="https://www.figma.com/design/9PDlZ6Ew5opY1bwI6CWaHY/Mood-Mobile-Prototype?node-id=7-1957&m=dev&t=Sa8c9bOe3PqkGeB7-1"> */}
+                  {/* <img src={yawneazyMusic} alt="mood-mobile" className="thumbnail-img"  */}
+                  {/* /> */}
+                  <a href="https://www.figma.com/design/9PDlZ6Ew5opY1bwI6CWaHY/Mood-Mobile-Prototype?node-id=7-1957&m=dev&t=Sa8c9bOe3PqkGeB7-1"> 
+                  <p class="description-title"> Mood Mobile App Prototype</p></a>
+                 <p>Description: UX prototyping project from ASU, featuring four user flows for <b>Mood</b>, a mobile concert ticketing app created on Figma.</p>
+                 </div>
+
+                 <div className="thumbnail">
+                  
+                  {/* <a href="https://www.figma.com/design/9PDlZ6Ew5opY1bwI6CWaHY/Mood-Mobile-Prototype?node-id=7-1957&m=dev&t=Sa8c9bOe3PqkGeB7-1"> */}
+                   {/* <img src={yawneazyMusic} alt="mood-mobile" className="thumbnail-img"  */}
+                   {/* /> */}
+                   <a href="https://www.figma.com/design/bgefy02CQro8wIc5ZR5CP6/Alyssa_Yanez_TypePersonaTPS?node-id=2717-5274&m=dev&t=uZM9TiBNJcrw0Q2S-1"> 
+                   <p class="description-title"> Type Persona Specimen App Prototype</p></a>
+                  <p>Description: UX prototyping project from ASU, featuring components - created on Figma.</p>
+                  </div>
+
+                  <div className="thumbnail">
+                  
+                  {/* <a href="https://www.figma.com/design/9PDlZ6Ew5opY1bwI6CWaHY/Mood-Mobile-Prototype?node-id=7-1957&m=dev&t=Sa8c9bOe3PqkGeB7-1"> */}
+                   {/* <img src={yawneazyMusic} alt="mood-mobile" className="thumbnail-img"  */}
+                   {/* /> */}
+                   <a href="https://www.figma.com/design/KJNOKjplUNdOnmjda0sZhb/VGS-iOS-App?node-id=0-1&m=dev&t=PFHwBcJtEBJxRjdl-1"> 
+                   <p class="description-title"> VGS iOS App Hi Fi Concept</p></a>
+                  <p>Description: High-fidelity concept for VGS’s iOS app created on Figma, designed to support efficient plant data collection and field-based workflows.</p>
+                  </div>
+
+          
     </>
   );
 
