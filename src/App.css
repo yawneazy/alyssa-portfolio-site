@@ -89,4 +89,23 @@ main {
   padding: 1rem 0;
   width: 100%;
   margin-top: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.social-icons a {
+  color: black;
+  text-decoration: none;
+  font-size: 3rem;
+  transition: 0.2s;
+}
+
+.social-icons a:hover {
+  color: #aaa;
 }
