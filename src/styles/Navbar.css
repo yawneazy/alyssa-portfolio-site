@@ -5,6 +5,8 @@
   /* font-weight: 700; */
   text-decoration: none;
   color: black;
+  position: relative;
+  z-index: 1100;
 }
 .nav-links a {
   text-decoration: none;
@@ -32,6 +34,17 @@
   display: none;
 }
 
+.menu {
+  display: none;
+}
+
+.menu.visible {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
 /* resume button styling (optional polish) */
 .resume-btn {
   padding: 0.4rem 0.8rem;
@@ -57,30 +70,82 @@
 .nav-socials a:hover {
   opacity: 0.6;
 }
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1100;
+}
+
+.burger-bar {
+  width: 25px;
+  height: 2px;
+  background: black;
+  transition: 0.3s ease;
+}
 
 /* MOBILE */
+
 @media (max-width: 768px) {
+  .burger-menu {
+    display: flex;
+    gap: 5px;
+    cursor: pointer;
+  }
+
+  .burger-menu.open .burger-bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .burger-menu.open .burger-bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .burger-menu.open .burger-bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
 
   .desktop-nav {
     display: none;
   }
 
-  .mobile-nav {
+  .nav-socials {
+    margin-left: 0;          /* removes push-to-right behavior */
+  display: flex;
+  justify-content: center; /* centers icons horizontally */
+  align-items: center;
+  width: 100%;
+  gap: 1.5rem;
+  }
+
+  .mobile-nav.visible {
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-
+    justify-content: flex-start;
+    position: fixed;
+    /* top: 100px; */
+    padding-top: 4rem;
+    left: 0;
     width: 100%;
-    gap: 1.5rem;
-
-    /* animation */
-    animation: fadeDown 0.3s ease-out;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.95); 
+    z-index: 999;
+    gap: 2rem;
   }
 
   .mobile-nav a {
     opacity: 0;
     transform: translateY(-10px);
     animation: fadeInItem 0.4s ease forwards;
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
   }
 
   .mobile-nav a:nth-child(1) { animation-delay: 0.05s; }
