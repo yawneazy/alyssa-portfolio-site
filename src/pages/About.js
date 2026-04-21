@@ -1,47 +1,44 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import portrait from '../images/homepic.jpg';
+import holdingEl from '../images/me_&_El.jpeg';
+import performing from '../images/performing.jpeg';
 import '../styles/About.css';
 
 const About = () => {
   return (
-    <div>
-    <div class="about-container">
-      <div class="about-text">
+    <div className="about-page">
+    <div className="about-container">
+      <div className="about-text">
       <h1>About Me</h1>
-                 <p>Although my journey has taken some unexpected turns,
-                  it shaped me into a versatile creator. I’ve always been 
-                  drawn to creativity, but turning that passion into a career 
-                  wasn’t easy.
+                  <p> I competed as a NCAA Division II collegiate golfer while I earned a B.A. in Music 
+                  from Holy Names University in 2018. After developing a growing interest in technology, 
+                  I went on to complete a 
+                  B.S. in Computer Science at the University of Arizona in 2023.
                   </p>
                   <p>
-                  In 2018, I earned a BA in Music from Holy Names University 
-                  while competing as an NCAA golfer, performing, and teaching 
-                  music. My growing interest in technology led me to complete a 
-                  BS in Computer Science at the University of Arizona in 2023.
+                    During this transition, I also discovered a passion for design which led me to pursue 
+                    an M.S. in User Experience at Arizona State University, completed in 2025—just before the birth of my daughter.
+                  
+                  Through my studies, internships and professional experience, I found my focus in frontend development and UI/UX design, 
+                  where I get to combine creativity with 
+                  problem-solving to build thoughtful digital experiences.
                   </p>
-
                   <p>
-                  Learning to code was challenging but incredibly rewarding. 
-                  Through jobs and internships, I discovered my perfect fit: 
-                  <b> Front-end Design and Development.</b> With this, I get to blend creativity with 
-                  problem-solving to build mobile apps and websites.
-                  </p>
-    <p> I’m now finishing up my master’s degree in User Experience at ASU, and launching a 
-      custom website business to support local businesses and projects I care about. 
-      I’ve found my dream career and am excited for what’s ahead:)
+                  I’m always open to connecting on new projects or opportunities and continuing to grow as a developer and designer.
 </p>
 
      </div>
-      {/* <div class="portrait-container"> */}
-      <img src={portrait} alt="Profile pic" className="portrait-photo" />
-      {/* </div> */}
-    </div>
-    <div class="home-link">
-      <Link to="/">Go Home</Link>
+      <div className="about-images">
+      <img src={holdingEl} alt="me holding Elena" className="about-img" />
+      <img src={performing} alt="me performing" className="about-img" />
       </div>
+    </div>
+    {/* <div class="home-link">
+      <Link to="/">Go Home</Link>
+      </div> */}
     </div>
   );
 };
 
-export default About;   
+export default About;

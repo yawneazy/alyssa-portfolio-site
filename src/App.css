@@ -6,6 +6,44 @@ body {
   height: 100%;
 }
 
+/* Root colors */
+:root {
+  /* Blues */
+  --color-main-blue:  #415a77;
+  --color-hover-blue: #778da9;
+  /* Greens */
+  --color-main-green: #606c38;;
+  --color-hover-green: #283618;
+  /* Browns */
+  --color-main-brown: #582f0e;
+  --color-hover-brown:  #6e4730;
+    /* Oranges */
+    --color-main-orange: #b3845f;
+    --color-hover-orange: #bc6c25;
+}
+
+/* CSS Reset (keep as-is) */
+/* html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+} */
+
 .back-button-container {
   text-align: left; 
   width: 100%;
@@ -44,21 +82,6 @@ html {
   max-width: 1200px;
   margin: 0 auto; 
   padding: 0 20px;
-}
-
-.home-link {
-  text-align: center;
-  font-size: 1rem;
-  margin-top: auto; 
-}
-
-.home-link a {
-  color: #5e503f; 
-  text-decoration: none; 
-}
-
-.home-link a:hover {
-  text-decoration: underline; 
 }
 
 /********************************************* */

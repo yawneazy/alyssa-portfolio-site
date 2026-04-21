@@ -1,41 +1,74 @@
+.home-link {
+  text-align: center;
+  font-size: 1rem;
+  margin-top: auto; 
+}
+
+.home-link a {
+  color: #5e503f; 
+  text-decoration: none; 
+}
+
+.home-link a:hover {
+  text-decoration: underline; 
+}
+
+.home-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* fade upward motion */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.home-text {
+  flex: 2;
+  text-align: left;
+}
+
+.portrait-photo {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  max-width: 350px;
+  border-radius: 50%;
+}
+
 .selected {
   font-size: 3.5rem; 
 }
 
 /* Blues */
-.designer, .portfolio, .video-productions {
-    color: #415a77;
-  }
-
-  .video-productions:hover, .designer:hover, .portfolio:hover {
-    color: #778da9;
-  }
-
-  /* Greens   */
-  .artist {
-    color: #606c38;
-  }
-
-  .artist:hover {
-    color: #283618;
-  }
-  
-  /* Browns */
-  .musician, .resume {
-    color: #582f0e;
-  }
-
-  .musician:hover, .resume:hover {
-    color: #6e4730;
-  }
-
-  /* Oranges */
-.developer {
-  color: #b3845f;
+.developer a {
+  color: var(--color-main-blue);
+  text-decoration: none;
 }
 
-.developer:hover {
-  color: #bc6c25;
+.developer a:hover {
+  color: var(--color-hover-blue);
+}
+
+.designer a {
+  color: var(--color-main-green);
+  text-decoration: none;
+}
+
+.designer a:hover {
+  color: var(--color-hover-green);
 }
 
   .home-header {
@@ -56,3 +89,21 @@
       font-size: 1.5rem;
       text-align: left;
       }
+
+@media (max-width: 768px) {
+  .home-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .home-image {
+    justify-content: center;
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+
+  .portrait-photo {
+    margin: 0 auto;
+    display: block;
+  }
+}

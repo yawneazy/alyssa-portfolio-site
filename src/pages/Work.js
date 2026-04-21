@@ -1,150 +1,110 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import piano from '../images/piano.jpg';
-import vgslogo from '../images/vgs-thumb.png';
-import yawneazyMusic from '../images/yawneazy-site.JPG';
-import resume from '../images/resume-thumb.png';
-import diploma from '../images/diploma-thumb.png';
+import React from 'react';
+// import { Link } from 'react-router-dom';
 import '../styles/Work.css';
 
+import piano from '../images/piano.jpg';
+import vgslogo from '../images/vgs-logo.png';
+import yawneazyMusic from '../images/yawneazy-site.JPG';
+
 const Work = () => {
-  // const [isExpanded, setIsExpanded] = useState(false);
+  const projects = [
+    {
+      type: "development",
+      title: "Olson Wedding Photos",
+      image: piano,
+      link: "https://olsonwedding123.web.app/",
+      description:
+        "React + Firebase site showcasing a responsive photography portfolio."
+    },
+    {
+      type: "development",
+      title: "VGS Website",
+      image: vgslogo,
+      link: "https://vgs.arizona.edu",
+      description:
+        "UI/UX redesign and ongoing frontend improvements for VGS."
+    },
+    {
+      type: "development",
+      title: "Aly Olson Music",
+      image: yawneazyMusic,
+      link: "https://yawneazy.com",
+      description:
+        "Personal music website built and deployed as a creative project."
+    },
 
-  // const toggleDescription = () => {
-  //   setIsExpanded(!isExpanded);
-  // };
+    // // UX / DESIGN
+    {
+      type: "design",
+      title: "Mood Mobile App Prototype",
+      image: null,
+      link: "https://www.figma.com/design/9PDlZ6Ew5opY1bwI6CWaHY/Mood-Mobile-Prototype",
+      description:
+        "UX prototype for a concert ticketing app created in Figma."
+    },
+    {
+      type: "design",
+      title: "VGS iOS Mobile App Prototype",
+      image: null,
+      link: "https://www.figma.com/design/KJNOKjplUNdOnmjda0sZhb/VGS-iOS-App?node-id=0-1&p=f",
+      description:
+        "UX prototype for the iOS VGS app on Figma"
+    },
+    {
+      type: "design",
+      title: "Type Persona Specimen",
+      image: null,
+      link: "https://www.figma.com/design/bgefy02CQro8wIc5ZR5CP6",
+      description:
+        "Typography-based UX exploration and component design system."
+    }
+  ];
 
-  const [selectedCategory, setSelectedCategory] = useState(null);
+  const renderSection = (title, type) => (
+    <div className="work-section">
+      <h2>{title}</h2>
 
-  const renderCredentialsContent = () => (
-    <>
-      <h2>Resume & Credentials</h2>
-          <div className="docs-container">
-            <div className="docs-thumb">
-            <a href="/docs/A.Olson_Resume.pdf" download>
-              <img src={resume} alt="resume" className="thumbnail-img" /></a>
-                 </div>
-                 <div className="docs-thumb">
-            <a href="/docs/A.Olson_eDiploma.pdf" download>
-              <img src={diploma} alt="diploma" className="thumbnail-img" /></a>
-                 </div>
-                 </div>
-    </>
-  );
-
-  const renderPortfolioContent = () => (
-    <>
-      <h2>Portfolio</h2>
-                 <div className="portfolio-container">
-                 <div className="thumbnail">
-                 <a href="https://olsonwedding123.web.app/"><img src={piano} alt="Piano" className="thumbnail-img" />
-                 <p class="description-title">Olson Wedding Photography Site</p></a>
-                 <p>Description:</p>
-                <p>This is a digital portfolio website I developed independently, utilizing the React framework for a 
-                  dynamic and interactive experience. Deployed through Firebase, the site showcases my proficiency in 
-                  React, CSS, HTML, and JavaScript. It highlights my skills and knowledge in building modern web applications, 
-                  reflecting my expertise in front-end development.</p> 
-                 </div>
-                 {/* <div onClick={toggleDescription} className="description-toggle">
-            Description
-            <span className={`caret ${isExpanded ? 'rotate' : ''}`}>▼</span>
-          </div> */}
-                 <div className="thumbnail">
-                 <a href="https://vgs.arizona.edu"><img src={vgslogo} alt="VGS" className="thumbnail-img" />
-                 <p class="description-title">VGS Site</p></a>
-                 <p>Description: </p>
-                 <p>This is the re-designed website for VGS, which was my first project as a 
-                  UI/UX designer. My role is to design and implement changes, consistently keeping my team updated 
-                  with progress and actively seeking their feedback and suggestions. This collaborative approach allowed me to 
-                  refine the site effectively, enhancing its functionality and user experience. The project highlights my skills 
-                  in UI/UX design and my commitment to teamwork and continuous improvement. - <b>In progress</b></p>
-                 </div>
-
-                 <div className="thumbnail">
-                 <a href="https://yawneazy.com"><img src={yawneazyMusic} alt="yawneazy-music" className="thumbnail-img" />
-                 <p class="description-title">Yawneazy Music</p></a>
-                 <p>Description: </p>
-                 <p>Alyssa Olson's music website - <b>In progress</b></p>
-                 </div>
-                 </div>
-
-                 <h2>Prototypes</h2>
-                 <div className="thumbnail">
-                  
-                 {/* <a href="https://www.figma.com/design/9PDlZ6Ew5opY1bwI6CWaHY/Mood-Mobile-Prototype?node-id=7-1957&m=dev&t=Sa8c9bOe3PqkGeB7-1"> */}
-                  {/* <img src={yawneazyMusic} alt="mood-mobile" className="thumbnail-img"  */}
-                  {/* /> */}
-                  <a href="https://www.figma.com/design/9PDlZ6Ew5opY1bwI6CWaHY/Mood-Mobile-Prototype?node-id=7-1957&m=dev&t=Sa8c9bOe3PqkGeB7-1"> 
-                  <p class="description-title"> Mood Mobile App Prototype</p></a>
-                 <p>Description: UX prototyping project from ASU, featuring four user flows for <b>Mood</b>, a mobile concert ticketing app created on Figma.</p>
-                 </div>
-
-                 <div className="thumbnail">
-                  
-                  {/* <a href="https://www.figma.com/design/9PDlZ6Ew5opY1bwI6CWaHY/Mood-Mobile-Prototype?node-id=7-1957&m=dev&t=Sa8c9bOe3PqkGeB7-1"> */}
-                   {/* <img src={yawneazyMusic} alt="mood-mobile" className="thumbnail-img"  */}
-                   {/* /> */}
-                   <a href="https://www.figma.com/design/bgefy02CQro8wIc5ZR5CP6/Alyssa_Yanez_TypePersonaTPS?node-id=2717-5274&m=dev&t=uZM9TiBNJcrw0Q2S-1"> 
-                   <p class="description-title"> Type Persona Specimen App Prototype</p></a>
-                  <p>Description: UX prototyping project from ASU, featuring components - created on Figma.</p>
-                  </div>
-
-                  <div className="thumbnail">
-                  
-                  {/* <a href="https://www.figma.com/design/9PDlZ6Ew5opY1bwI6CWaHY/Mood-Mobile-Prototype?node-id=7-1957&m=dev&t=Sa8c9bOe3PqkGeB7-1"> */}
-                   {/* <img src={yawneazyMusic} alt="mood-mobile" className="thumbnail-img"  */}
-                   {/* /> */}
-                   <a href="https://www.figma.com/design/KJNOKjplUNdOnmjda0sZhb/VGS-iOS-App?node-id=0-1&m=dev&t=PFHwBcJtEBJxRjdl-1"> 
-                   <p class="description-title"> VGS iOS App Hi Fi Concept</p></a>
-                  <p>Description: High-fidelity concept for VGS’s iOS app created on Figma, designed to support efficient plant data collection and field-based workflows.</p>
-                  </div>
-
+      <div className="project-grid">
+        {projects
+          .filter((p) => p.type === type)
+          .map((project, index) => (
+            <a
+            key={index}
+            href={project.link}
+            target="_blank"
+            rel="noreferrer"
+            className="project-card"
+          >
+            <div className="card-content">
+              <h3>{project.title}</h3>
+              <p>{project.description}</p>
+      
+            </div>
           
-    </>
+            {project.image && (
+              <img
+                src={project.image}
+                alt={project.title}
+                className="project-img"
+              />
+            )}
+                    <span className="card-link">View Project →</span>
+          </a>
+          ))}
+      </div>
+    </div>
   );
 
-  // const renderContent = () => {
-  //   switch (selectedCategory) {
-  //     case 'portfolio':
-  //       return renderPortfolioContent();
-  //     case 'resume':
-  //       return renderCrendentialsContent();
-  //     default:
-  //       return null; 
-  //   }
-  // };
-  
   return (
-    <div>
-       <div class="play-header">My Professional Side</div>
-       <div className="play-header2">
-      Check out my{' '}
-      <span>
-          resume
-        </span>
-        ,{' '}
-      <span className={`resume ${selectedCategory === 'resume' ? 'selected' : ''}`} onClick={() => setSelectedCategory('resume')}>
-          credentials
-        </span>
-        ,{' '}
-        and{' '}
-        <span className={`portfolio ${selectedCategory === 'portfolio' ? 'selected' : ''}`} onClick={() => setSelectedCategory('portfolio')}>
-          portfolio
-        </span>
-    
-        .
-      </div>
+    <div className="work-page">
+      <div className="work-header">Selected Work</div>
 
-      {/* <p>Select a word above to explore more.</p> */}
-      <div className="work-container">
-        {/* {renderContent()} */}
-        {renderCredentialsContent()}
-        {renderPortfolioContent()}
-      </div>
+      {renderSection("Development", "development")}
+      {renderSection("Design", "design")}
 
-            <div class="home-link">
-                 <Link to="/">Go Home</Link>
-                 </div>
+      {/* <div className="home-link">
+        <Link to="/">Go Home</Link>
+      </div> */}
     </div>
   );
 };
