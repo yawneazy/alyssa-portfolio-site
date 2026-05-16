@@ -4,17 +4,26 @@ import '../styles/Work.css';
 
 import piano from '../images/piano.jpg';
 import vgslogo from '../images/vgs-logo.png';
+import valenciaLogo from '../images/valencia-logo.jpg';
 import yawneazyMusic from '../images/yawneazy-site.JPG';
 
 const Work = () => {
   const projects = [
     {
       type: "development",
-      title: "Olson Wedding Photos",
-      image: piano,
-      link: "https://olsonwedding123.web.app/",
+      title: "MadeForURL",
+      // image: valenciaLogo,
+      link: "https://madeforurl.com/",
       description:
-        "React + Firebase site showcasing a responsive photography portfolio."
+        "Design and implementation for MadeForURL custom website business - In progress"
+    },
+    {
+      type: "development",
+      title: "Valencia Financial Accounting",
+      image: valenciaLogo,
+      link: "https://valenciafinancialgroup.com/",
+      description:
+        "Design and implementation for Valencia Financial Accounting firm - In progress"
     },
     {
       type: "development",
@@ -26,6 +35,14 @@ const Work = () => {
     },
     {
       type: "development",
+      title: "Wedding Photography Site",
+      image: piano,
+      link: "https://olsonwedding123.web.app/",
+      description:
+        "React + Firebase site showcasing a responsive photography portfolio."
+    },
+    {
+      type: "development",
       title: "Aly Olson Music",
       image: yawneazyMusic,
       link: "https://yawneazy.com",
@@ -33,7 +50,7 @@ const Work = () => {
         "Personal music website built and deployed as a creative project."
     },
 
-    // // UX / DESIGN
+    // UX / DESIGN
     {
       type: "design",
       title: "Mood Mobile App Prototype",
