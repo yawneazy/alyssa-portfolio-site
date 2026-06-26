@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
-import { SiBuymeacoffee } from "react-icons/si";
+import { FaHandHoldingHeart } from "react-icons/fa";
 import '../styles/Navbar.css';
 
 const Navbar = () => {
@@ -64,7 +64,7 @@ const Navbar = () => {
         <FaLinkedin />
       </a>
       <a href="https://buymeacoffee.com/yawneazy" target="_blank" rel="noreferrer">
-        <SiBuymeacoffee />
+        <FaHandHoldingHeart />
       </a>
     </div>
   );
